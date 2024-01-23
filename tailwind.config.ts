@@ -15,7 +15,11 @@ const config: Config = {
         'primary white': '#F9E19C',
         'texts': '#FFF7E0',
         'dark': '#1B1A1F',
-      }
+      },
+      fontFamily: {
+        title: ['var(--font-shrikhand)'],
+        body: ['var(--font-mplus-rounded)'],
+      },
     },
   },
   plugins: [],
