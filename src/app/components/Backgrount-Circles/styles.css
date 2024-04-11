@@ -1,0 +1,33 @@
+.semi-circle-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+
+}
+
+.semi-circle-right {
+  width: 1200px;
+  height: 100vh;
+  border-top-right-radius: 500vw;
+  border-bottom-right-radius: 500vw;
+  margin-left: -50%;
+  background-color: #FFD600;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.semi-circle-left {
+  width: 1600px;
+  height: 1600px;
+  margin-right: -50%;
+  border-top-left-radius: 1600px;
+  border-bottom-left-radius: 1600px;
+  background-color: #FFD600;
+  margin-top: 250px;
+  overflow: hidden;
+  z-index: -1;
+}
