@@ -24,6 +24,23 @@ body {
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
+::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B1A1F;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1B1A1F;
+}
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

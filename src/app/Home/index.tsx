@@ -13,6 +13,15 @@ export default function Home() {
         <h1 className="text-dark font-body text-xl">Projects</h1>
       </div>
       <BackgroundCircles />
+      <div className="z-1 flex items-center justify-between">
+        <h2 className='text-dark text-6xl text-center font-title'>Ask me about JavaScript, React, React Native, NodeJS</h2>
+        <Image
+          alt='Yellow person'
+          src="./yellowPerson.svg"
+          width={700}
+          height={700}
+        />
+      </div>
     </>
   );
 }
