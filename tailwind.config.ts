@@ -20,8 +20,21 @@ const config: Config = {
         title: ['var(--font-shrikhand)'],
         body: ['var(--font-mplus-rounded)'],
       },
+      keyframes: {
+        'one-bounce': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '20%': { transform: 'translateY(-20px)' },
+          '40%': { transform: 'translateY(10px)' },
+          '60%': { transform: 'translateY(-10px)' },
+          '80%': { transform: 'translateY(5px)' },
+        }
+      },
+      animation: {
+        'one-bounce': 'one-bounce 1s ease-in-out',
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

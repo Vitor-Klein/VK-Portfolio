@@ -13,9 +13,10 @@
 .semi-circle-right {
   width: 1200px;
   height: 100vh;
-  border-top-right-radius: 500vw;
-  border-bottom-right-radius: 500vw;
+  border-top-right-radius: 1200px;
+  border-bottom-right-radius: 1200px;
   background-color: #FFD600;
+  margin-left: -150px;
 }
 
 .semi-circle-left {
@@ -25,4 +26,5 @@
   border-bottom-left-radius: 1600px;
   background-color: #FFD600;
   margin-top: 250px;
+  margin-left: 150px;
 }
