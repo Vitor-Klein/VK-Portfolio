@@ -4,6 +4,7 @@ import Lottie from 'react-lottie'
 import Header from '../components/Header'
 import BackgroundCircles from '../components/Backgrount-Circles'
 import AboutMeCard from '../components/AboutMeCard'
+import ProjectCard from '../components/ProjectCard'
 
 import welcomeAnimation from '../animations/welcome.json'
 export default function Home() {
@@ -30,11 +31,15 @@ export default function Home() {
 
       <AboutMeCard />
 
-      <div>
-        <h2 className=' text-dark text-5xl text-center font-body ml-10 mt-52'>Projetos:</h2>
-
-        <div>
-
+      <div className='flex flex-col items-center mt-52'>
+        <h2 className='text-dark text-5xl text-center font-body ml-10'>Projetos:</h2>
+        <div className='w-full max-w-7xl mt-12'>
+          <div className='grid grid-cols-2 gap-4'>
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+          </div>
         </div>
       </div>
     </>
