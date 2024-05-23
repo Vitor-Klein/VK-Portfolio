@@ -30,7 +30,7 @@ const config: Config = {
         }
       },
       animation: {
-        'one-bounce': 'one-bounce 1s ease-in-out',
+        'one-bounce': 'one-bounce 2s ease-in-out',
       },
     },
   },
