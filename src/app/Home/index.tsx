@@ -33,8 +33,8 @@ export default function Home() {
 
       <div className='flex flex-col items-center mt-52'>
         <h2 className='text-dark text-5xl text-center font-body ml-10'>Projetos:</h2>
-        <div className='w-full max-w-7xl mt-12'>
-          <div className='grid grid-cols-2 gap-4'>
+        <div className='w-full max-w-7xl mt-28'>
+          <div className='grid grid-cols-2 gap-16'>
             <ProjectCard />
             <ProjectCard />
             <ProjectCard />
