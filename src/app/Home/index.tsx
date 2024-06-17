@@ -1,32 +1,51 @@
 'use client'
 
-import Lottie from 'react-lottie'
 import Header from '../components/Header'
 import BackgroundCircles from '../components/Backgrount-Circles'
 import AboutMeCard from '../components/AboutMeCard'
 import ProjectCard from '../components/ProjectCard'
 
-import welcomeAnimation from '../animations/welcome.json'
+import IconCloud from "../components/magicui/icon-cloud";
+import LetterPullup from "../components/magicui/letter-pullup";
+
+const slugs = [
+  "typescript",
+  "javascript",
+  "dart",
+  "java",
+  "react",
+  "flutter",
+  "android",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "postgresql",
+  "vercel",
+  "docker",
+  "git",
+  "github",
+  "visualstudiocode",
+  "androidstudio",
+  "figma",
+];
 export default function Home() {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: welcomeAnimation,
-    renderSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  };
   return (
     <>
       <Header />
       <BackgroundCircles />
       <div className="z-1 flex items-center justify-between h-screen">
-        <h2 className=' text-dark text-6xl text-center font-title'>Ask me about JavaScript, ReactJS, React Native, NodeJS</h2>
-        <Lottie
-          options={defaultOptions}
-          height={1800}
-          width={1800}
-        />
+        <div className='ml-8'>
+          <LetterPullup words={"Ask me about "} delay={0.05} />
+          <LetterPullup words={"JavaScript, ReactJS,"} delay={0.05} />
+          <LetterPullup words={"React Native, NodeJS"} delay={0.05} />
+        </div>
+
+        {/* <h2 className=' text-dark text-6xl text-center font-title'>Ask me about JavaScript, ReactJS, React Native, NodeJS</h2> */}
+        <div className="relative flex h-full w-full max-w-[44rem] items-center justify-center overflow-hidden rounded-lg bg-background px-20 pb-20 pt-8 ">
+          <IconCloud iconSlugs={slugs} />
+        </div>
       </div>
 
       <AboutMeCard />
