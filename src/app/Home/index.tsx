@@ -3,7 +3,6 @@
 import Header from '../components/Header'
 import BackgroundCircles from '../components/Backgrount-Circles'
 import AboutMeCard from '../components/AboutMeCard'
-import ProjectCard from '../components/ProjectCard'
 
 import IconCloud from "../components/magicui/icon-cloud";
 import LetterPullup from "../components/magicui/letter-pullup";

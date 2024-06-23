@@ -27,10 +27,19 @@ const config: Config = {
           '40%': { transform: 'translateY(10px)' },
           '60%': { transform: 'translateY(-10px)' },
           '80%': { transform: 'translateY(5px)' },
-        }
+        },
+        orbit: {
+          "0%": {
+            transform: "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          },
+        },
       },
       animation: {
         'one-bounce': 'one-bounce 2s ease-in-out',
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
       },
     },
   },
