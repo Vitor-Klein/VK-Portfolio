@@ -11,9 +11,10 @@ import { cn } from "@/lib/utils";
 
 import Marquee from "../components/magicui/marquee";
 import { BentoCard, BentoGrid } from "../components/magicui/bento-grid";
+
 import {
   GitHubLogoIcon,
-  FileTextIcon
+  FigmaLogoIcon
 } from "@radix-ui/react-icons";
 
 const slugs = [
@@ -41,45 +42,41 @@ const slugs = [
 
 const files = [
   {
-    name: "bitcoin.pdf",
+    name: "Tras-It♻️",
     body: "Bitcoin is a cryptocurrency invented in 2008 by an unknown person or group of people using the name Satoshi Nakamoto.",
   },
   {
-    name: "finances.xlsx",
+    name: "Portfolio🖋️",
     body: "A spreadsheet or worksheet is a file made of rows and columns that help sort data, arrange data easily, and calculate numerical data.",
   },
   {
-    name: "logo.svg",
+    name: "Drink-It🍹",
     body: "Scalable Vector Graphics is an Extensible Markup Language-based vector image format for two-dimensional graphics with support for interactivity and animation.",
   },
   {
-    name: "keys.gpg",
+    name: "CoffeApp☕",
     body: "GPG keys are used to encrypt and decrypt email, files, directories, and whole disk partitions and to authenticate messages.",
-  },
-  {
-    name: "seed.txt",
-    body: "A seed phrase, seed recovery phrase or backup seed phrase is a list of words which store all the information needed to recover Bitcoin funds on-chain.",
   },
 ];
 
 const features = [
   {
-    Icon: FileTextIcon,
-    name: "Save your files",
-    description: "We automatically save your files as you type.",
+    Icon: FigmaLogoIcon,
+    name: "Desiner UX/UI",
+    description: "Alguns De Meus Mokups e Prototipações",
     href: "/",
-    cta: "Learn more",
+    cta: "Acessar Perfil Figma",
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-3",
     background: (
       <Marquee
         pauseOnHover
-        className="absolute top-10 [--duration:20s] [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] "
+        className="absolute top-10 [--duration:10s] [mask-image:linear-gradient(to_top,transparent_30%,#000_100%)] "
       >
         {files.map((f, idx) => (
           <figure
             key={idx}
             className={cn(
-              "relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4",
+              "relative w-52 h-96 cursor-pointer overflow-hidden rounded-xl border p-4",
               "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
               "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
               "transform-gpu blur-[1px] transition-all duration-300 ease-out hover:blur-none",

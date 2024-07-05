@@ -25,12 +25,14 @@ export default function AboutMeCard() {
           className='w-32 h-32 mb-3 rounded-full shadow-lg float-left'
         />
         <p className='w-9/12 text-texts font-body text-xl'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Odio asdd Et
-          ultrices neque ornare aenean euismod elit, sed do eiusmod elit, sed do sea.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Odio asdd
-          Et ultrices neque ornare aenean euismod elit, sed do eiusmod elit, sed do sea.
+          Estudante de Ciência da Computação na 
+          Universidade Tecnológica Federal do Paraná, estou 
+          em constante busca por conhecimento e atualização tecnológica. 
+          Valorizo a colaboração e a aprendizagem contínua, elementos que 
+          considero fundamentais para o sucesso profissional e pessoal. 
+          Engajado em projetos que exploram a fronteira da tecnologia, estou 
+          comprometido em entregar excelência e produtividade sem deixar de lado 
+          a meticulosidade de um bom desenvolvedor
         </p>
       </div>
       <a href='' className='text-primary font-body text-xl hover:underline'>Read More</a>
