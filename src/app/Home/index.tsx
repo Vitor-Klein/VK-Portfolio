@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 
 import Header from '../components/Header'
 import BackgroundCircles from '../components/Backgrount-Circles'
@@ -14,8 +15,10 @@ import { BentoCard, BentoGrid } from "../components/magicui/bento-grid";
 
 import {
   GitHubLogoIcon,
-  FigmaLogoIcon
+  FigmaLogoIcon,
+  BackpackIcon
 } from "@radix-ui/react-icons";
+
 
 const slugs = [
   "typescript",
@@ -43,19 +46,19 @@ const slugs = [
 const files = [
   {
     name: "Tras-It♻️",
-    body: "Bitcoin is a cryptocurrency invented in 2008 by an unknown person or group of people using the name Satoshi Nakamoto.",
+    body: "App criado com o intuito de ajudar na otimização da coleta de lixo facilitando a comunicação entre prefeitura e seus moradores",
   },
   {
     name: "Portfolio🖋️",
-    body: "A spreadsheet or worksheet is a file made of rows and columns that help sort data, arrange data easily, and calculate numerical data.",
+    body: "Desing deste portfólio junto com outras ideias e designs passados",
   },
   {
     name: "Drink-It🍹",
-    body: "Scalable Vector Graphics is an Extensible Markup Language-based vector image format for two-dimensional graphics with support for interactivity and animation.",
+    body: "App voltado para diversão com a criação de um 'Drinking game' para diversao em festas",
   },
   {
     name: "CoffeApp☕",
-    body: "GPG keys are used to encrypt and decrypt email, files, directories, and whole disk partitions and to authenticate messages.",
+    body: "App criado com o intuito de auxiliar na criação e armazenamento de receitas para baristas e entusiastas do mundo dos cafés especiais.",
   },
 ];
 
@@ -64,7 +67,7 @@ const features = [
     Icon: FigmaLogoIcon,
     name: "Desiner UX/UI",
     description: "Alguns De Meus Mokups e Prototipações",
-    href: "/",
+    href: "https://www.figma.com/@vitorKlein",
     cta: "Acessar Perfil Figma",
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-3",
     background: (
@@ -105,12 +108,12 @@ const features = [
     className: "lg:col-start-2 lg:col-end-2 lg:row-start-1 lg:row-end-3",
   },
   {
-    Icon: GitHubLogoIcon,
-    name: "Calendar3",
-    description: "Use the calendar to filter your files by date.",
-    href: "/",
-    cta: "Learn more",
-    background: <img alt='' className=" absolute -right-20 -top-20 opacity-60" />,
+    Icon: BackpackIcon,
+    name: "UTFPR",
+    description: "Atualmente cursando Ciencia da Computação",
+    href: "https://github.com/Vitor-Klein/Materias-UTFPR",
+    cta: "Acessar repositório de projetos",
+    background: <img alt='' src='./utfpr-white.png' className=" absolute w-60 right-4 top-6 opacity-70" />,
     className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2",
   },
   {

@@ -65,7 +65,7 @@ const BentoCard = ({
       )}
     >
       <Button variant="ghost" asChild size="sm" className="pointer-events-auto">
-        <a href={href}>
+        <a target="_blank" href={href}>
           {cta}
           <ArrowRightIcon className="ml-2 h-4 w-4" />
         </a>
