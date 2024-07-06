@@ -156,6 +156,21 @@ export default function Home() {
           </BentoGrid>
         </div>
       </div>
+
+      <div className='flex flex-col items-center mb-10'>
+        <h2 className='text-dark text-5xl text-center font-body ml-10'>Curriculo:</h2>
+        <img
+          className='mt-20 rounded-xl m-5'
+          src="./Curriculum.svg"
+          alt="" />
+        <a
+          href="./Curriculum.pdf"
+          download='Vitor Curriculum'
+          className='text-xl bg-dark pr-20 pl-20 pt-4 pb-4 rounded-xl hover:bg-dark hover:bg-opacity-95'
+        >
+          Download CV
+        </a>
+      </div>
     </>
   );
 }
