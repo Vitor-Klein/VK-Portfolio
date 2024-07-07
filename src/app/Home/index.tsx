@@ -70,6 +70,7 @@ const features = [
     href: "https://www.figma.com/@vitorKlein",
     cta: "Acessar Perfil Figma",
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-3",
+    iconColor: 'text-red-500',
     background: (
       <Marquee
         pauseOnHover
@@ -106,6 +107,8 @@ const features = [
     cta: "Learn more",
     background: <img alt='' className=" absolute -right-20 -top-20 opacity-60" />,
     className: "lg:col-start-2 lg:col-end-2 lg:row-start-1 lg:row-end-3",
+    iconColor: 'text-neutral-200',
+
   },
   {
     Icon: BackpackIcon,
@@ -115,6 +118,8 @@ const features = [
     cta: "Acessar repositório de projetos",
     background: <img alt='' src='./utfpr-white.png' className=" absolute w-60 right-4 top-6 opacity-70" />,
     className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2",
+    iconColor: 'text-yellow-500',
+
   },
   {
     Icon: GitHubLogoIcon,
@@ -124,6 +129,8 @@ const features = [
     cta: "Learn more",
     background: <img alt='' className=" absolute -right-20 -top-20 opacity-60" />,
     className: "lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-2",
+    iconColor: 'text-neutral-700',
+
   },
 
 ];
@@ -139,7 +146,8 @@ export default function Home() {
           <LetterPullup words={"React Native, NodeJS"} delay={0.05} />
         </div>
 
-        <div className="relative flex h-full w-full max-w-[44rem] items-center justify-center overflow-hidden rounded-lg bg-background px-20 pb-20 pt-8 ">
+        <div className="relative flex h-full w-full max-w-[44rem] items-center 
+        justify-center overflow-hidden rounded-lg bg-background px-20 pb-20 pt-8 ">
           <IconCloud iconSlugs={slugs} />
         </div>
       </div>
