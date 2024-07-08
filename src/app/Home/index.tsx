@@ -64,6 +64,7 @@ const files = [
 ];
 
 const features = [
+  //Figma Posts
   {
     Icon: FigmaLogoIcon,
     name: "Desiner UX/UI",
@@ -100,6 +101,7 @@ const features = [
       </Marquee>
     ),
   },
+  // Nada ainda
   {
     Icon: GitHubLogoIcon,
     name: "Calendar2",
@@ -111,6 +113,7 @@ const features = [
     iconColor: 'text-neutral-200',
 
   },
+  //UTFPR
   {
     Icon: BackpackIcon,
     name: "UTFPR",
@@ -122,6 +125,7 @@ const features = [
     iconColor: 'text-yellow-500',
 
   },
+  //Nada ainda
   {
     Icon: GitHubLogoIcon,
     name: "Calendar4",
