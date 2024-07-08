@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Header from '../components/Header'
 import BackgroundCircles from '../components/Backgrount-Circles'
 import AboutMeCard from '../components/AboutMeCard'
+import BlurFade from "../components/magicui/blur-fade";
 
 import IconCloud from "../components/magicui/icon-cloud";
 import LetterPullup from "../components/magicui/letter-pullup";
@@ -70,7 +71,7 @@ const features = [
     href: "https://www.figma.com/@vitorKlein",
     cta: "Acessar Perfil Figma",
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-3",
-    iconColor: 'text-red-500',
+    iconColor: 'text-slate-500',
     background: (
       <Marquee
         pauseOnHover
@@ -151,8 +152,10 @@ export default function Home() {
           <IconCloud iconSlugs={slugs} />
         </div>
       </div>
+      <BlurFade delay={0.25} inView>
+        <AboutMeCard />
 
-      <AboutMeCard />
+      </BlurFade>
 
       <div className='flex flex-col items-center mt-52'>
         <h2 className='text-dark text-5xl text-center font-body ml-10'>Projetos:</h2>

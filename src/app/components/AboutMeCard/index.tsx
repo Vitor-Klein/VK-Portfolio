@@ -1,20 +1,13 @@
 'use client';
 
 import Image from 'next/image';
-import { useInView } from 'react-intersection-observer';
 
 export default function AboutMeCard() {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
 
   return (
     <div
-      ref={ref}
-      className={`w-6/12 h-30 bg-dark p-5 rounded-xl ml-10 mt-10 shadow-2xl 
-    shadow-dark transition-opacity duration-700 
-      ${inView ? 'animate-one-bounce opacity-100' : 'opacity-0'}`}
+      className="w-6/12 h-30 bg-dark p-5 rounded-xl ml-10 mt-10 shadow-2xl 
+    shadow-dark transition-opacity duration-700 "
     >
       <div className="flex justify-between">
         <Image
