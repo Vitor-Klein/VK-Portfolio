@@ -72,7 +72,7 @@ const features = [
     href: "https://www.figma.com/@vitorKlein",
     cta: "Acessar Perfil Figma",
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-3",
-    iconColor: 'text-slate-500',
+    iconColor: 'text-rose-500',
     background: (
       <Marquee
         pauseOnHover
