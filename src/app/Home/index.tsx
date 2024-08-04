@@ -1,16 +1,13 @@
 'use client'
-import Image from 'next/image';
-
 import Header from '../components/Header'
 import BackgroundCircles from '../components/Backgrount-Circles'
 import AboutMeCard from '../components/AboutMeCard'
-import BlurFade from "../components/magicui/blur-fade";
-
-import IconCloud from "../components/magicui/icon-cloud";
-import LetterPullup from "../components/magicui/letter-pullup";
 
 import { cn } from "@/lib/utils";
 
+import BlurFade from "../components/magicui/blur-fade";
+import IconCloud from "../components/magicui/icon-cloud";
+import LetterPullup from "../components/magicui/letter-pullup";
 import Marquee from "../components/magicui/marquee";
 import { BentoCard, BentoGrid } from "../components/magicui/bento-grid";
 
@@ -128,13 +125,14 @@ const features = [
   //Nada ainda
   {
     Icon: GitHubLogoIcon,
-    name: "Calendar4",
-    description: "Use the calendar to filter your files by date.",
+    name: "Coffetfolio",
+    description: "Meu portfolio para cafés.",
     href: "/",
-    cta: "Learn more",
-    background: <img alt='' className=" absolute -right-20 -top-20 opacity-60" />,
-    className: "lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-2",
-    iconColor: 'text-neutral-700',
+    cta: "Veja mais",
+    background:
+      <img alt='' src='./coffetfolio.png' className=" absolute top-11 opacity-60 w-64" />,
+    className: "lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-2 ",
+    iconColor: 'text-[#8C4C17]',
 
   },
 
@@ -153,7 +151,9 @@ export default function Home() {
 
         <div className="relative flex h-full w-full max-w-[44rem] items-center 
         justify-center overflow-hidden rounded-lg bg-background px-20 pb-20 pt-8 ">
-          <IconCloud iconSlugs={slugs} />
+          <BlurFade delay={0.25} inView>
+            <IconCloud iconSlugs={slugs} />
+          </BlurFade>
         </div>
       </div>
       <BlurFade delay={0.25} inView>
@@ -171,21 +171,22 @@ export default function Home() {
           </BentoGrid>
         </div>
       </div>
-
-      <div className='flex flex-col items-center mb-10'>
-        <h2 className='text-dark text-5xl text-center font-body ml-10'>Curriculo:</h2>
-        <img
-          className='mt-20 rounded-xl m-5'
-          src="./Curriculum.svg"
-          alt="" />
-        <a
-          href="./Curriculum.pdf"
-          download='Vitor Curriculum'
-          className='text-xl bg-dark pr-20 pl-20 pt-4 pb-4 rounded-xl hover:bg-dark hover:bg-opacity-95'
-        >
-          Download CV
-        </a>
-      </div>
+      <BlurFade delay={0.25} inView>
+        <div className='flex flex-col items-center mb-10'>
+          <h2 className='text-dark text-5xl text-center font-body ml-10'>Curriculo:</h2>
+          <img
+            className='mt-20 rounded-xl m-5'
+            src="./Curriculum.svg"
+            alt="" />
+          <a
+            href="./Curriculum.pdf"
+            download='Vitor Curriculum'
+            className='text-xl bg-dark pr-20 pl-20 pt-4 pb-4 rounded-xl hover:bg-dark hover:bg-opacity-95'
+          >
+            Download CV
+          </a>
+        </div>
+      </BlurFade>
     </>
   );
 }
