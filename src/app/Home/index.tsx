@@ -130,8 +130,8 @@ const features = [
     href: "/",
     cta: "Veja mais",
     background:
-      <img alt='' src='./coffetfolio.png' className=" absolute top-11 opacity-60 w-64" />,
-    className: "lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-2 ",
+      <img alt='' src='./coffetfolio.png' className=" absolute top-11 opacity-80 w-64" />,
+    className: "lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-2",
     iconColor: 'text-[#8C4C17]',
 
   },
