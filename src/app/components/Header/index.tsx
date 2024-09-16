@@ -10,7 +10,7 @@ export default function Header() {
           width={32}
           height={32}
         />
-        <h1 className=" text-dark font-body text-xl">Projects</h1>
+        <a href='#projects' className=" text-dark font-body text-xl">Projects</a>
       </div>
     </>
   );

@@ -40,6 +40,10 @@ body {
   background: #1B1A1F;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 @layer utilities {
   .text-balance {

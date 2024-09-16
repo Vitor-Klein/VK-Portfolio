@@ -10,11 +10,13 @@ import IconCloud from "../components/magicui/icon-cloud";
 import LetterPullup from "../components/magicui/letter-pullup";
 import Marquee from "../components/magicui/marquee";
 import { BentoCard, BentoGrid } from "../components/magicui/bento-grid";
+import Iphone15Pro from "../components/magicui/iphone-15-pro";
 
 import {
   GitHubLogoIcon,
   FigmaLogoIcon,
-  BackpackIcon
+  BackpackIcon,
+  TrashIcon
 } from "@radix-ui/react-icons";
 
 
@@ -100,14 +102,16 @@ const features = [
   },
   // Nada ainda
   {
-    Icon: GitHubLogoIcon,
-    name: "Calendar2",
-    description: "Use the calendar to filter your files by date.",
+    Icon: TrashIcon,
+    name: "Trash-It",
+    description: "Aplicação para potencializar e auxiliar a coleta de lixo em pequenas e medias cidades.",
     href: "/",
     cta: "Learn more",
-    background: <img alt='' className=" absolute -right-20 -top-20 opacity-60" />,
+    background: <div className="absolute mt-80">
+      <Iphone15Pro src='./splash.png' className="size-72" />
+    </div>,
     className: "lg:col-start-2 lg:col-end-2 lg:row-start-1 lg:row-end-3",
-    iconColor: 'text-neutral-200',
+    iconColor: 'text-green-600',
 
   },
   //UTFPR
@@ -161,7 +165,7 @@ export default function Home() {
 
       </BlurFade>
 
-      <div className='flex flex-col items-center mt-52'>
+      <div className='flex flex-col items-center mt-52' id='projects'>
         <h2 className='text-dark text-5xl text-center font-body ml-10'>Projetos:</h2>
         <div className='w-full max-w-7xl mt-28'>
           <BentoGrid className="lg:grid-rows-3 h-[38rem]">
