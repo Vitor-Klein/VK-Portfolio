@@ -105,7 +105,7 @@ const features = [
     Icon: TrashIcon,
     name: "Trash-It",
     description: "Aplicação para potencializar e auxiliar a coleta de lixo em pequenas e medias cidades.",
-    href: "/",
+    href: "https://trash-it.vercel.app",
     cta: "Learn more",
     background: <div className="absolute mt-80">
       <Iphone15Pro src='./splash.png' className="size-72" />
