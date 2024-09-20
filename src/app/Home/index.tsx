@@ -108,7 +108,7 @@ const features = [
     href: "https://trash-it.vercel.app",
     cta: "Learn more",
     background: <div className="absolute mt-80">
-      <Iphone15Pro src='./splash.svg' className="size-72" />
+      <Iphone15Pro src='./Splash.png' className="size-72" />
     </div>,
     className: "lg:col-start-2 lg:col-end-2 lg:row-start-1 lg:row-end-3",
     iconColor: 'text-green-600',
