@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from "../ui/button";
 import { cn } from "../../../lib/utils";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
@@ -72,7 +73,7 @@ const BentoCard = ({
       )}
     >
       <Button variant="ghost" asChild size="sm" className="pointer-events-auto">
-        <a target="_blank" href={href}>
+        <a href={href}>
           {cta}
           <ArrowRightIcon className="ml-2 h-4 w-4" />
         </a>
