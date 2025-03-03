@@ -9,16 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'primary': '#FFD600',
-        'secondary': '#E8D3A4',
-        'terciary': '#BFAC87',
-        'primary white': '#F9E19C',
-        'texts': '#FFF7E0',
-        'dark': '#1B1A1F',
+        'background': '#32393F',
+        'secondary': '#EDF1EA',
+        'background-destaq': '#6A6059',
+        'midia': '#E2AF53',
       },
       fontFamily: {
-        title: ['var(--font-shrikhand)'],
-        body: ['var(--font-mplus-rounded)'],
+        primary: ['var(--font-titillium_web)'],
+        primaryBold: ['var(--font-titillium_web_bold)']
       },
       keyframes: {
         'one-bounce': {

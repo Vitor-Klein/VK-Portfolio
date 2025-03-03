@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { M_PLUS_Rounded_1c, Shrikhand } from "next/font/google";
+import { Titillium_Web } from "next/font/google";
 import "./globals.css";
 
-const shrikhand = Shrikhand({
-  weight: '400',
-  variable: '--font-shrikhand',
+const TitilliumWebBold = Titillium_Web({
+  weight: '700',
+  variable: '--font-titillium_web_bold',
   subsets: ['latin']
 })
 
-const mPlus = M_PLUS_Rounded_1c({
-  weight: '800',
-  variable: '--font-mplus-rounded',
+const TitilliumWeb = Titillium_Web({
+  weight: '400',
+  variable: '--font-titillium_web',
   subsets: ['latin']
 })
 
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${shrikhand.variable} ${mPlus.variable}`}>
+    <html lang="en" className={`${TitilliumWebBold.variable} ${TitilliumWeb.variable}`}>
       <body>
         {children}
       </body>
