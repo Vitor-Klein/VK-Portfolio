@@ -9,19 +9,28 @@ export default function Hero() {
           src="./svgTop.svg"
           alt=""
         />
-        <div className="absolute w-full flex flex-row items-center justify-evenly mt-10 z-0 px-4 md:px-0">
-          <button className="md:w-52 md:h-14 w-32 h-10 rounded-sm bg-secondary text-background font-primaryBold text-sm md:text-base">
+        <div className="absolute z-20 w-full flex flex-row items-center justify-evenly mt-10 z-0 px-4 md:px-0">
+          <a
+            href="#projects"
+            className="md:w-52 md:h-14 w-32 h-10 flex items-center justify-center rounded-sm bg-secondary text-background font-primaryBold text-sm md:text-base"
+          >
             Projetos
-          </button>
-          <button className="md:w-52 md:h-14 w-32 h-10 rounded-sm bg-secondary text-background font-primaryBold text-sm md:text-base">
+          </a>
+          <a
+            href="#experinces"
+            className="md:w-52 md:h-14 w-32 h-10 flex items-center justify-center rounded-sm bg-secondary text-background font-primaryBold text-sm md:text-base"
+          >
             Experiências
-          </button>
-          <button className="md:w-52 md:h-14 w-32 h-10 rounded-sm bg-secondary text-background font-primaryBold text-sm md:text-base">
+          </a>
+          <a
+            href="#curriculum"
+            className="md:w-52 md:h-14 w-32 h-10 flex items-center justify-center rounded-sm bg-secondary text-background font-primaryBold text-sm md:text-base"
+          >
             Currículo
-          </button>
+          </a>
         </div>
 
-        <div className="z-10 absolute w-full h-full flex flex-col items-center justify-center px-4 md:px-0">
+        <div className="z-10 absolute w-screen h-screen flex flex-col items-center justify-center px-4 md:px-0">
           <img
             src="./meImage.jpg"
             alt=""

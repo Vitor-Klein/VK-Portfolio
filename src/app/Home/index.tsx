@@ -156,12 +156,11 @@ export default function Home() {
       <BlurFade delay={0.25} inView>
         <Hero />
       </BlurFade>
-
-      <div className="flex flex-col items-center mt-52" id="projects">
+      <div className="flex flex-col items-center md:mt-52 mt-20" id="projects">
         <h2 className="text-dark text-5xl text-center font-body ml-10">
           Projetos:
         </h2>
-        <div className="w-full max-w-7xl mt-28">
+        <div className="w-full md:max-w-7xl max-w-[380px] mt-28 ">
           <BentoGrid className="lg:grid-rows-3 h-[38rem]">
             {features.map((feature) => (
               <BentoCard key={feature.name} {...feature} />
@@ -169,16 +168,21 @@ export default function Home() {
           </BentoGrid>
         </div>
       </div>
-      <BlurFade delay={0.25} inView>
-        <div className="flex flex-col items-center mb-10">
+
+      <BlurFade delay={0.25} inView className="mt-[60rem] md:mt-0">
+        <div className="flex flex-col items-center mb-10" id="curriculum">
           <h2 className="text-dark text-5xl text-center font-body ml-10">
             Curriculo:
           </h2>
-          <img className="mt-20 rounded-xl m-5" src="./Curriculum.svg" alt="" />
+          <img
+            className="mt-20 rounded-xl m-5 w-96 h-auto md:w-3/6"
+            src="./Curriculum.svg"
+            alt=""
+          />
           <a
             href="./Curriculum.pdf"
             download="Vitor Curriculum"
-            className="text-xl bg-dark pr-20 pl-20 pt-4 pb-4 rounded-xl hover:bg-dark hover:bg-opacity-95"
+            className="text-xl bg-midia text-background pr-20 pl-20 pt-4 pb-4 rounded-xl hover:bg-dark hover:bg-opacity-95"
           >
             Download CV
           </a>
