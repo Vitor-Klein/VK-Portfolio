@@ -12,19 +12,19 @@ export default function Hero() {
         <div className="absolute z-20 w-full flex flex-row items-center justify-evenly mt-10 z-0 px-4 md:px-0">
           <a
             href="#projects"
-            className="md:w-52 md:h-14 w-32 h-10 flex items-center justify-center rounded-sm bg-secondary text-background font-primaryBold text-sm md:text-base"
+            className="md:w-52 md:h-14 w-32 h-10 flex items-center justify-center rounded-sm bg-secondary text-background font-primaryBold text-sm md:text-base hover:bg-dark hover:bg-opacity-90"
           >
             Projetos
           </a>
           <a
             href="#experinces"
-            className="md:w-52 md:h-14 w-32 h-10 flex items-center justify-center rounded-sm bg-secondary text-background font-primaryBold text-sm md:text-base"
+            className="md:w-52 md:h-14 w-32 h-10 flex items-center justify-center rounded-sm bg-secondary text-background font-primaryBold text-sm md:text-base hover:bg-dark hover:bg-opacity-90"
           >
             Experiências
           </a>
           <a
             href="#curriculum"
-            className="md:w-52 md:h-14 w-32 h-10 flex items-center justify-center rounded-sm bg-secondary text-background font-primaryBold text-sm md:text-base"
+            className="md:w-52 md:h-14 w-32 h-10 flex items-center justify-center rounded-sm bg-secondary text-background font-primaryBold text-sm md:text-base hover:bg-dark hover:bg-opacity-90"
           >
             Currículo
           </a>

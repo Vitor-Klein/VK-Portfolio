@@ -176,7 +176,7 @@ export default function Home() {
           </h2>
           <img
             className="mt-20 rounded-xl m-5 w-96 h-auto md:w-3/6"
-            src="./Curriculum.svg"
+            src="./Curriculum.jpg"
             alt=""
           />
           <a
