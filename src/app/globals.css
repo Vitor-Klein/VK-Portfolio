@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 @theme {
   /* Base surface */
   --color-bg: #0a0908;
   --color-bg-raised: #121110;
-
   /* Ink */
   --color-ink: #f4f1ea;
   --color-ink-dim: #b4afa4;
@@ -21,6 +22,10 @@
   --color-glass-strong: rgba(244, 241, 234, 0.09);
   --color-glass-border: rgba(244, 241, 234, 0.12);
   --color-glass-border-strong: rgba(244, 241, 234, 0.2);
+
+  /* shadcn/Magic UI tokens, mapped onto the glass palette */
+  --color-background: rgba(20, 19, 17, 0.55);
+  --color-border: rgba(244, 241, 234, 0.12);
 
   --font-display: var(--font-space-grotesk), "Segoe UI", sans-serif;
   --font-sans: var(--font-inter), "Segoe UI", sans-serif;
@@ -143,5 +148,129 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+/* Hero motion — transform/opacity only so it stays on the compositor */
+.hero-aurora {
+  animation: hero-drift 18s ease-in-out infinite alternate;
+}
+
+.hero-aurora--alt {
+  animation-duration: 24s;
+  animation-direction: alternate-reverse;
+}
+
+.hero-float {
+  animation: hero-float 6s ease-in-out infinite;
+}
+
+.hero-float--alt {
+  animation-duration: 7.5s;
+  animation-delay: -2s;
+}
+
+.hero-caret {
+  animation: hero-blink 1s steps(1, end) infinite;
+}
+
+.hero-marquee {
+  animation: hero-marquee 40s linear infinite;
+}
+
+.hero-name-shimmer {
+  background-size: 220% 100%;
+  background-position: 100% 0;
+  animation: hero-shimmer 2.4s cubic-bezier(0.22, 1, 0.36, 1) 1.4s both;
+}
+
+@keyframes hero-drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(8%, 6%, 0) scale(1.12);
+  }
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes hero-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes hero-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes hero-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+/* Section contours: slow orbit spin + light comets travelling the rings */
+.contour-spin {
+  animation: contour-spin 120s linear infinite;
+}
+
+.contour-comet {
+  animation: contour-comet 20s linear infinite;
+}
+
+@keyframes contour-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes contour-comet {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contour-spin,
+  .contour-comet,
+  .hero-aurora,
+  .hero-float,
+  .hero-marquee,
+  .hero-name-shimmer {
+    animation: none;
+  }
+}
+
+@theme inline {
+  --animate-orbit: orbit calc(var(--duration)*1s) linear infinite;
+  @keyframes orbit {
+  0% {
+    transform: rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+    }
+  100% {
+    transform: rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg));
+    }
   }
 }

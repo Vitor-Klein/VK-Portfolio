@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef } from "react";
 import type { ElementType, ReactNode } from "react";
+import { MagicCard } from "@/components/magicui/magic-card";
 import { cn } from "@/lib/utils";
 
 type GlassPanelProps = {
@@ -13,9 +13,8 @@ type GlassPanelProps = {
 };
 
 /**
- * Core "liquid glass" surface: translucent layered background, blurred
- * backdrop, specular top sheen and (optionally) a soft glow that tracks the
- * pointer — the web equivalent of an interactive glassEffect().
+ * Core "liquid glass" surface. With `spotlight` it becomes a Magic UI card whose
+ * border and fill light up in amber around the pointer.
  */
 export function GlassPanel({
   children,
@@ -24,28 +23,26 @@ export function GlassPanel({
   spotlight = false,
   tight = false,
 }: GlassPanelProps) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  function handleMouseMove(event: React.MouseEvent<HTMLDivElement>) {
-    if (!spotlight || !ref.current) return;
-    const rect = ref.current.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width) * 100;
-    const y = ((event.clientY - rect.top) / rect.height) * 100;
-    ref.current.style.setProperty("--spot-x", `${x}%`);
-    ref.current.style.setProperty("--spot-y", `${y}%`);
+  if (spotlight) {
+    return (
+      <MagicCard
+        gradientSize={320}
+        gradientColor="rgba(255, 201, 74, 0.09)"
+        gradientOpacity={1}
+        gradientFrom="#ffc94a"
+        gradientTo="#d99a1b"
+        className={cn(
+          "rounded-2xl backdrop-blur-xl shadow-[inset_0_1px_0_0_rgba(244,241,234,0.1),0_24px_60px_-28px_rgba(0,0,0,0.75)]",
+          className
+        )}
+      >
+        {children}
+      </MagicCard>
+    );
   }
 
   return (
-    <Tag
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      className={cn(
-        "glass group relative rounded-2xl",
-        tight && "glass-tight",
-        className
-      )}
-    >
-      {spotlight && <span className="glass-spot" aria-hidden="true" />}
+    <Tag className={cn("glass relative rounded-2xl", tight && "glass-tight", className)}>
       <div className="relative z-10">{children}</div>
     </Tag>
   );

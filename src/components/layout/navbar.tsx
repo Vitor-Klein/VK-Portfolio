@@ -33,11 +33,8 @@ export function Navbar() {
           scrolled && "shadow-[0_20px_50px_-24px_rgba(0,0,0,0.85)]"
         )}
       >
-        <a
-          href="#top"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-accent-400 font-display text-sm font-bold text-[#17140a]"
-        >
-          {profile.initials}
+        <a href="#top" className="flex h-9 w-9 items-center justify-center">
+          <img src={profile.avatar} alt={profile.name} className="h-9 w-9 object-contain" />
         </a>
 
         <ul className="hidden items-center gap-1 md:flex">

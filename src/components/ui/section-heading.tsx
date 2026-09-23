@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 
 type SectionHeadingProps = {
+  index?: string;
   eyebrow: string;
   title: string;
   description?: string;
@@ -9,6 +10,7 @@ type SectionHeadingProps = {
 };
 
 export function SectionHeading({
+  index,
   eyebrow,
   title,
   description,
@@ -23,14 +25,16 @@ export function SectionHeading({
         className
       )}
     >
-      <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent-400">
+      <span className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-accent-400">
+        {index && <span className="tabular-nums text-ink-faint">{index}</span>}
+        {index && <span className="h-px w-10 bg-accent-400/50" />}
         {eyebrow}
       </span>
-      <h2 className="text-balance font-display text-3xl font-medium text-ink sm:text-4xl md:text-5xl">
+      <h2 className="text-balance font-display text-4xl font-medium tracking-tight text-ink sm:text-5xl md:text-6xl">
         {title}
       </h2>
       {description && (
-        <p className="max-w-2xl text-balance text-base text-ink-dim sm:text-lg">
+        <p className="max-w-2xl text-pretty text-base text-ink-dim sm:text-lg">
           {description}
         </p>
       )}
