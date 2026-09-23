@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# VK Portfolio
 
-## Getting Started
+Portfólio pessoal de Vitor Klein — reconstruído do zero em Next.js 16 (App
+Router) com um design system próprio em "liquid glass": superfícies
+translúcidas com desfoque, brilho especular e um único acento em amarelo
+âmbar sobre um fundo quase preto.
 
-First, run the development server:
+## Stack
+
+- [Next.js 16](https://nextjs.org/) (App Router, Turbopack)
+- React 19 + TypeScript
+- [Tailwind CSS 4](https://tailwindcss.com/) (tokens definidos via `@theme` em `src/app/globals.css`)
+- [motion](https://motion.dev/) para as animações de entrada
+- [lucide-react](https://lucide.dev/) para ícones de interface
+
+## Rodando localmente
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estrutura
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+src/
+  app/            # layout, página e estilos globais
+  components/
+    layout/       # navbar e footer
+    sections/     # hero, sobre, projetos, trajetória, contato
+    ui/           # primitivos do design system (glass panel, botão, chip...)
+  data/
+    content.ts    # fonte única de conteúdo (perfil, projetos, trajetória, contato)
+```
 
-## Learn More
+Todo o texto do site vive em `src/data/content.ts` — para atualizar bio,
+projetos, skills ou experiência profissional, edite apenas esse arquivo.
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Otimizado para [Vercel](https://vercel.com/new).
